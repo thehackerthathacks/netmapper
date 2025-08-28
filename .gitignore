@@ -1,0 +1,8 @@
+# Binary files
+bin/netmapper
+
+# Object files
+*.o
+
+# Backup / temp
+*~
