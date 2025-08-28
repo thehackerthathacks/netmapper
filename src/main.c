@@ -194,7 +194,7 @@ static void *worker_thread(void *arg) {
     if (alive) {
         get_mac_from_arp(ipbuf_local, h->mac, sizeof(h->mac));
         lookup_hostname(ipbuf_local, h->hostname, sizeof(h->hostname));
-        const int ports_to_check[] = {22,23,80,443,135,139,445,3389,8080};
+        const int ports_to_check[] = {21,22,23,53,80,443,445,135,139,3389,5900,8080};
         char portsbuf[256] = {0};
         int first = 1;
         for (size_t i = 0; i < sizeof(ports_to_check)/sizeof(int); i++) {
