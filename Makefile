@@ -1,12 +1,15 @@
+Makefile
 CC=gcc
-CFLAGS=`pkg-config --cflags gtk+-3.0` -O2 -Wall -pthread
-LIBS=`pkg-config --libs gtk+-3.0`
+CFLAGS=-O2 -Wall
+LDFLAGS=-lncurses -lpthread
 SRC=src/main.c
-OUT=netmapper
+BIN=bin/netmapper
+
 
 all:
-<TAB>mkdir -p bin
-<TAB>$(CC) $(CFLAGS) -o bin/$(OUT) $(SRC) $(LIBS)
+mkdir -p bin
+$(CC) $(CFLAGS) -o $(BIN) $(SRC) $(LDFLAGS)
+
 
 clean:
-<TAB>rm -rf bin
+rm -rf bin
