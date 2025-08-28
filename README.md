@@ -35,3 +35,11 @@ Install dependencies:
 ```bash
 sudo apt update
 sudo apt install build-essential libgtk-3-dev pkg-config
+```
+
+### Usage
+
+```bash
+make                                                         
+sudo bin/netmapper
+```
